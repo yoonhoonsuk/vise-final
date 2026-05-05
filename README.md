@@ -2,6 +2,20 @@
 
 A small monolithic web app for blending two portfolio models from `live_models.csv` into a new, named portfolio.
 
+## Running
+
+```sh
+# install (one-time)
+uv sync          # or: .venv/bin/pip install flask
+
+# CLI smoke test
+.venv/bin/python main.py
+
+# web app
+.venv/bin/python flask_app.py
+# open http://127.0.0.1:5000/
+```
+
 ## Problem
 
 `live_models.csv` contains several Vise model portfolios. Each row is `model_name, ticker, weight`, with weights inside a model summing to ~100. We often want to combine two of these models into a single new portfolio at a chosen mix — for example, "60% Bluechip Growth + 40% Bluechip Value" — and give that combination its own name and version label.
@@ -16,8 +30,9 @@ This app provides:
 
 TODO / Limitations:
 
-.csv intake form has not been created in case people want to input new models.
-The backend and database is not robust. Thus, new spin up of said app will refresh the memory of the models that has been blended.
+ - .csv intake form has not been created in case people want to input new models.
+ - The backend and database is not robust. Thus, new spin up of said app will refresh the memory of the models that has been blended.
+ - The blends naming convention is not defined, and users can create two models of the same name.
 
 ## Technology
 
@@ -95,32 +110,3 @@ Symbols with a resulting weight of 0 are dropped, and the output is sorted by we
 - The blended `total_weight` stays ~100 if both inputs do.
 
 The optional `name` overrides the default `"{a.name} (X%) + {b.name} (Y%)"` label — this is what the UI's *New model name* / *Instance name* fields feed into.
-
-## Running
-
-```sh
-# install (one-time)
-uv sync          # or: .venv/bin/pip install flask
-
-# CLI smoke test
-.venv/bin/python main.py
-
-# web app
-.venv/bin/python flask_app.py
-# open http://127.0.0.1:5000/
-```
-
-### API
-
-- `GET /api/models` — list all source models with their tickers.
-- `POST /api/blend` — body:
-  ```json
-  {
-    "model_a": "Vise Bluechip Growth",
-    "model_b": "Vise Bluechip Value",
-    "proportion_a": 0.6,
-    "model_name": "My Blend",
-    "instance_name": "v1"
-  }
-  ```
-  Returns the blended `LiveModel` as JSON, named `"My Blend — v1"`.

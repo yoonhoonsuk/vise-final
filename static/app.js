@@ -10,11 +10,17 @@ function App() {
   const [blended, setBlended] = useState(null);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
+  const refreshModels = () =>
     fetch("/api/models")
       .then((r) => r.json())
       .then((data) => {
         setModels(data);
+        return data;
+      });
+
+  useEffect(() => {
+    refreshModels()
+      .then((data) => {
         if (data.length >= 2) {
           setModelA(data[0].name);
           setModelB(data[1].name);
@@ -26,7 +32,7 @@ function App() {
       .catch((e) => setError(String(e)));
   }, []);
 
-  useEffect(() => {
+  const submitBlend = () => {
     if (!modelA || !modelB) return;
     fetch("/api/blend", {
       method: "POST",
@@ -47,10 +53,11 @@ function App() {
         } else {
           setError(null);
           setBlended(data);
+          refreshModels().catch((e) => setError(String(e)));
         }
       })
       .catch((e) => setError(String(e)));
-  }, [modelA, modelB, percentA, modelName, instanceName]);
+  };
 
   const percentB = 100 - percentA;
 
@@ -93,6 +100,10 @@ function App() {
               <option key={m.name} value={m.name}>{m.name}</option>
             ))}
           </select>
+        </div>
+        <div className="col">
+          <label>&nbsp;</label>
+          <button onClick={submitBlend}>Submit</button>
         </div>
       </div>
 

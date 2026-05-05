@@ -54,6 +54,7 @@ def blend_models():
         result_name = None
 
     result = blend(MODELS[name_a], MODELS[name_b], proportion_a, name=result_name)
+    MODELS[result.name] = result
     return jsonify({
         **model_to_json(result),
         "model_name": model_name,
