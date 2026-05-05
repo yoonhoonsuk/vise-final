@@ -1,0 +1,68 @@
+model_name,ticker,weight
+Vise Bluechip Growth,AAPL,9.42
+Vise Bluechip Growth,MSFT,8.87
+Vise Bluechip Growth,NVDA,8.31
+Vise Bluechip Growth,GOOGL,7.15
+Vise Bluechip Growth,AMZN,6.48
+Vise Bluechip Growth,META,5.93
+Vise Bluechip Growth,AVGO,5.21
+Vise Bluechip Growth,TSLA,4.76
+Vise Bluechip Growth,ADBE,4.58
+Vise Bluechip Growth,CRM,4.33
+Vise Bluechip Growth,NFLX,3.94
+Vise Bluechip Growth,ORCL,3.87
+Vise Bluechip Growth,AMD,3.62
+Vise Bluechip Growth,INTU,3.41
+Vise Bluechip Growth,NOW,3.18
+Vise Bluechip Growth,V,2.94
+Vise Bluechip Growth,MA,2.87
+Vise Bluechip Growth,UNH,2.73
+Vise Bluechip Growth,HD,4.21
+Vise Bluechip Growth,WMT,4.19
+Vise Bluechip Value,BRK.B,9.77
+Vise Bluechip Value,JPM,8.58
+Vise Bluechip Value,XOM,7.86
+Vise Bluechip Value,JNJ,7.20
+Vise Bluechip Value,PG,6.65
+Vise Bluechip Value,CVX,6.24
+Vise Bluechip Value,WMT,5.78
+Vise Bluechip Value,KO,5.34
+Vise Bluechip Value,PEP,4.88
+Vise Bluechip Value,MRK,4.65
+Vise Bluechip Value,PFE,4.41
+Vise Bluechip Value,BAC,4.07
+Vise Bluechip Value,WFC,3.76
+Vise Bluechip Value,AAPL,3.30
+Vise Bluechip Value,MSFT,4.10
+Vise Bluechip Value,UNH,4.06
+Vise Bluechip Value,MMM,3.30
+Vise Bluechip Value,VZ,3.05
+Vise Bluechip Value,T,3.00
+Vise Custom Core Completion,V,4.82
+Vise Custom Core Completion,MA,4.35
+Vise Custom Core Completion,UNH,4.03
+Vise Custom Core Completion,HD,3.76
+Vise Custom Core Completion,COST,3.56
+Vise Custom Core Completion,MSFT,4.30
+Vise Custom Core Completion,GOOGL,5.15
+Vise Custom Core Completion,JPM,3.97
+Vise Custom Core Completion,JNJ,3.82
+Vise Custom Core Completion,BAC,3.68
+Vise Custom Core Completion,DIS,3.56
+Vise Custom Core Completion,MCD,3.52
+Vise Custom Core Completion,NKE,3.41
+Vise Custom Core Completion,SBUX,3.55
+Vise Custom Core Completion,LOW,3.73
+Vise Custom Core Completion,TGT,3.64
+Vise Custom Core Completion,CAT,3.77
+Vise Custom Core Completion,DE,3.57
+Vise Custom Core Completion,BA,3.45
+Vise Custom Core Completion,LMT,3.09
+Vise Custom Core Completion,RTX,3.21
+Vise Custom Core Completion,GS,3.06
+Vise Custom Core Completion,MS,3.25
+Vise Custom Core Completion,BLK,2.98
+Vise Custom Core Completion,SCHW,3.17
+Vise Custom Core Completion,AMT,2.65
+Vise Custom Core Completion,PLD,2.27
+Vise Custom Core Completion,EQIX,2.68

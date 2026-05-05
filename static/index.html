@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vise Model Blender</title>
+    <style>
+      body { font-family: -apple-system, system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+      h1 { margin-bottom: 0.25rem; }
+      .sub { color: #666; margin-bottom: 1.5rem; }
+      .row { display: flex; gap: 1rem; align-items: flex-end; flex-wrap: wrap; }
+      .col { display: flex; flex-direction: column; gap: 0.25rem; }
+      label { font-size: 0.85rem; color: #555; }
+      select, input[type="range"], input[type="text"] { padding: 0.4rem; font-size: 1rem; }
+      input[type="text"] { border: 1px solid #ccc; border-radius: 4px; }
+      .slider-block { flex: 1 1 100%; margin-top: 1rem; }
+      .slider-block input[type="range"] { width: 100%; }
+      .props { display: flex; justify-content: space-between; font-size: 0.9rem; color: #444; }
+      table { border-collapse: collapse; width: 100%; margin-top: 1.5rem; }
+      th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #eee; }
+      th { background: #fafafa; font-weight: 600; }
+      td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+      .total { margin-top: 1rem; color: #555; font-size: 0.9rem; }
+      .name { margin-top: 1.5rem; font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <h1>Vise Model Blender</h1>
+    <div class="sub">Pick two models and a blend proportion.</div>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="/app.js"></script>
+  </body>
+</html>
